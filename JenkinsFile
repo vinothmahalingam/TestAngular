@@ -4,10 +4,10 @@ node {
         }
     
         stage('Install node modules'){
-            sh "npm install"
+            sh 'npm install'
         }
-        
+
         stage('Build'){
-            sh  "ng build --prod --output-path C:\\inetpub\\wwwroot\\TestAngular"
+            sh  'ng build --prod --output-path C:\\inetpub\\wwwroot\\TestAngular'
         }
 }
