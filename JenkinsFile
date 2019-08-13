@@ -1,15 +1,13 @@
-node{
-stages {
-stage('Checkout SCM'){
-         git credentialsId: 'vinothmahalingam', url: 'https://github.com/vinothmahalingam/TestAngular.git', branch: 'master'
-    }
-    stage('Install node modules'){
-       sh "npm install"
-     }
-    stage('Build'){
-      sh  "ng build --prod --output-path C:\\inetpub\\wwwroot\\TestAngular"
-     }
-}
-
+node { 
+        stage('Checkout SCM'){
+             git credentialsId: 'vinothmahalingam', url: 'https://github.com/vinothmahalingam/TestAngular.git', branch: 'master'
+        }
     
+        stage('Install node modules'){
+            sh "npm install"
+        }
+        
+        stage('Build'){
+            sh  "ng build --prod --output-path C:\\inetpub\\wwwroot\\TestAngular"
+        }
 }
