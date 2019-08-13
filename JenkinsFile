@@ -4,9 +4,9 @@ node{
          git credentialsId: 'vinothmahalingam', url: 'https://github.com/vinothmahalingam/TestAngular.git', branch: 'master'
     }
     stage('Install node modules'){
-        "npm install"
+       sh "npm install"
      }
     stage('Build'){
-        "ng build --prod --output-path C:\\inetpub\\wwwroot\\TestAngular"
+      sh  "ng build --prod --output-path C:\\inetpub\\wwwroot\\TestAngular"
      }
 }
